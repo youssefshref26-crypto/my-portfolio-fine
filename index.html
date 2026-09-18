@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youssef Sherif | Technical Support & QA Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        .glass-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+        }
+        .tab-btn {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            color: #334155;
+        }
+        .tab-btn:hover {
+            color: #0284c7;
+            border-color: #38bdf8;
+            background: #f0f9ff;
+        }
+        .tab-btn.active {
+            background: #0284c7;
+            color: #ffffff;
+            border-color: #0284c7;
+            box-shadow: 0 4px 12px 0 rgba(2, 132, 199, 0.25);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-sky-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-sky-600 flex items-center justify-center text-white font-black text-xl shadow-md">
+                    Y
+                </div>
+                <div>
+                    <h1 class="text-xl font-extrabold text-slate-900 tracking-wide">يوسف شريف</h1>
+                    <p class="text-xs text-sky-600 font-bold">Technical Support & QA Specialist</p>
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <nav class="flex flex-wrap justify-center gap-2 bg-slate-100 p-1.5 rounded-2xl border border-slate-200">
+                <button onclick="switchTab('about')" id="btn-about" class="tab-btn active px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300">
+                    <i class="fa-solid me-1.5 fa-user"></i> نبذة عني
+                </button>
+                <button onclick="switchTab('skills')" id="btn-skills" class="tab-btn px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300">
+                    <i class="fa-solid me-1.5 fa-certificate"></i> المهارات والشهادات
+                </button>
+                <button onclick="switchTab('experience')" id="btn-experience" class="tab-btn px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300">
+                    <i class="fa-solid me-1.5 fa-briefcase"></i> الخبرات والخدمات
+                </button>
+                <button onclick="switchTab('contact')" id="btn-contact" class="tab-btn px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300">
+                    <i class="fa-solid me-1.5 fa-paper-plane"></i> التواصل المباشر
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Body -->
+    <main class="max-w-6xl mx-auto px-4 py-10 flex-grow w-full">
+
+        <!-- TAB 1: About -->
+        <section id="tab-about" class="tab-content space-y-8">
+            <div class="glass-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
+                <div class="relative z-10 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-bold">
+                        <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span> متاح للفرص الجديدة
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight">
+                        متخصص دعم فني وضمان جودة بخلفية تقنية  
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-base md:text-lg font-medium">
+                        أجمع بين الخبرة العملية في حل المشكلات المعقدة والتعامل مع الشكاوى الصعبة، وبين الفهم التقني المتقدم لتقنية المعلومات (IT) والبرمجة ومبادئ الأمن السيبراني. أهدف لضمان أفضل تجربة للمستخدم وتحسين جودة الخدمة.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+                        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-sky-400 transition">
+                            <i class="fa-solid fa-headset text-3xl text-sky-600 mb-3"></i>
+                            <h3 class="font-bold text-slate-900 text-base">دعم فني متتقدم</h3>
+                            <p class="text-xs text-slate-600 mt-1">حل المشكلات الفنية وإدارة الشكاوى المعقدة بسرعة وكفاءة عالية.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-400 transition">
+                            <i class="fa-solid fa-list-check text-3xl text-teal-600 mb-3"></i>
+                            <h3 class="font-bold text-slate-900 text-base">ضمان الجودة (QA)</h3>
+                            <p class="text-xs text-slate-600 mt-1">متابعة وتقييم الأداء لضمان الالتزام بأعلى معايير الجودة للخدمة.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cyan-400 transition">
+                            <i class="fa-solid fa-shield-halved text-3xl text-cyan-600 mb-3"></i>
+                            <h3 class="font-bold text-slate-900 text-base">خلفية IT و أمن سيبراني</h3>
+                            <p class="text-xs text-slate-600 mt-1">معرفة برمجية مع شهادة معتمدة في أساسيات الأمن السيبراني من هارفارد.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: Skills & Certifications -->
+        <section id="tab-skills" class="tab-content hidden space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Certifications -->
+                <div class="glass-card rounded-3xl p-6 md:p-8 space-y-5">
+                    <h2 class="text-xl font-extrabold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-award text-amber-500"></i> الشهادات والتقديرات
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h3 class="font-bold text-slate-900">CS50 CS: Fundamentals of Cybersecurity</h3>
+                                    <p class="text-sm text-sky-600 mt-0.5 font-bold">Harvard University</p>
+                                </div>
+                                <span class="text-xs bg-sky-100 text-sky-700 border border-sky-200 px-2.5 py-1 rounded-full font-bold">معتمدة</span>
+                            </div>
+                            <p class="text-xs text-slate-600 mt-2">تأمين البيانات والشبكات وفهم الثغرات الشائعة وكيفية الحد منها.</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h3 class="font-bold text-slate-900">شهادات تقدير وتميز في الدعم الفني</h3>
+                                    <p class="text-sm text-teal-600 mt-0.5 font-bold">شركات سابقة</p>
+                                </div>
+                                <span class="text-xs bg-teal-100 text-teal-700 border border-teal-200 px-2.5 py-1 rounded-full font-bold">تقدير أداء</span>
+                            </div>
+                            <p class="text-xs text-slate-600 mt-2">تكريمات جودة الأداء والسرعة والاحترافية في التعامل مع الشكاوى الصعبة.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="glass-card rounded-3xl p-6 md:p-8 space-y-5">
+                    <h2 class="text-xl font-extrabold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-gears text-sky-600"></i> المهارات الأساسية
+                    </h2>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 text-sm font-bold text-slate-700 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-sky-600"></i> حل الشكاوى الصعبة
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 text-sm font-bold text-slate-700 flex items-center gap-2">
+                            <i class="fa-solid fa-chart-line text-teal-600"></i> تحليل وتطوير الأداء
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 text-sm font-bold text-slate-700 flex items-center gap-2">
+                            <i class="fa-solid fa-handshake text-indigo-600"></i> إنهاء الصفقات
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 text-sm font-bold text-slate-700 flex items-center gap-2">
+                            <i class="fa-solid fa-file-excel text-emerald-600"></i> MS Office الاحترافي
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 text-sm font-bold text-slate-700 flex items-center gap-2">
+                            <i class="fa-solid fa-code text-cyan-600"></i> أساسيات البرمجة
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 text-sm font-bold text-slate-700 flex items-center gap-2">
+                            <i class="fa-solid fa-network-wired text-blue-600"></i> أساسيات الـ IT
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: Experience -->
+        <section id="tab-experience" class="tab-content hidden space-y-8">
+            <div class="glass-card rounded-3xl p-6 md:p-8 space-y-6">
+                <h2 class="text-2xl font-extrabold text-slate-900 border-b border-slate-200 pb-4">مجالات التخصص والخبرة</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                        <h3 class="text-lg font-bold text-sky-600 flex items-center gap-2">
+                            <i class="fa-solid fa-headset"></i> الدعم الفني وتجربة المستخدم
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            إدارة وتحليل البلاغات والشكاوى المعقدة بمهنية عالية، والعمل على تقديم حلول جذرية تضمن رضا العميل والحفاظ على استمرارية الخدمة.
+                        </p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                        <h3 class="text-lg font-bold text-teal-600 flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i> اختبار واختبارات الجودة (QA)
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            تقييم المكالمات والتذاكر والتأكد من مطابقتها مع معايير الجودة المعتمدة، واكتشاف نقاط التحسين وتدريب الفريق عليها.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: Contact -->
+        <section id="tab-contact" class="tab-content hidden space-y-8">
+            <div class="glass-card rounded-3xl p-6 md:p-10 text-center max-w-2xl mx-auto space-y-6">
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900">تواصل معي مباشرة</h2>
+                <p class="text-slate-600 text-sm md:text-base">
+                    يمكنك التواصل معي للحصول على الـ CV الكامل أو لمناقشة فرص العمل والتعاون المباشر.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+                    <a href="https://wa.me/201099017148" target="_blank" class="px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold transition shadow-md flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> واتساب: 01099017148
+                    </a>
+                    <a href="mailto:youssef.shref26@gmail.com" class="px-6 py-3.5 bg-sky-600 hover:bg-sky-700 text-white rounded-xl font-bold transition shadow-md flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-envelope text-lg"></i> البريد الإلكتروني
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500">
+        <p>جميع الحقوق محفوظة © 2026 - يوسف شريف | Technical Support & QA Specialist</p>
+    </footer>
+
+    <!-- Tab Logic -->
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            document.getElementById('btn-' + tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
